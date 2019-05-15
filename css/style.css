@@ -1,0 +1,86 @@
+* {
+    font-family: 'Roboto Slab', serif;
+
+    /* Basis Schriftgröße festlegen andere Schriftgrößen werden über rem Einheit definiert */
+    font-size: 14px;
+}
+
+.headNav{
+    width: 100%;
+    position: absolute;
+    left: -40px;
+    top: -14px;
+    display: flex;
+    justify-content: center;
+    background: rgb(179, 212, 255);
+    z-index: -1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    position: relative;
+    left: 0;
+    padding: 20px;
+    list-style: none;
+    background: rgb(179, 212, 255);
+    z-index: 1;
+}
+
+li:hover{
+    cursor: pointer;
+    background: #0087ff;
+    transition:1s;
+}
+
+.startseite{
+
+}
+
+.registrierungButton{
+    padding: 20px;
+    -webkit-text-fill-color: white;
+    position: absolute;
+    top: 0px;
+    left: 1530px;
+}
+
+.registrierungButton:hover{
+    cursor: pointer;
+    background: #0087ff;
+    transition:1s;
+}
+
+.loginButton{
+    padding: 20px;
+    -webkit-text-fill-color: white;
+    position: absolute;
+    top: 0px;
+    left: 1450px;
+}
+
+.loginButton:hover{
+    cursor: pointer;
+    background: #0087ff;
+    transition:1s;
+}
+
+
+.neueListe{
+
+}
+
+.shops{
+
+}
+
+.kontakt{
+
+}
+
+.impressum{
+
+}
