@@ -9,20 +9,19 @@ body{
     background-color: rgba(145, 206, 255, 0.4);
 }
 
+span {
+    color: white;
+}
+
 .headNav{
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     display: flex;
     justify-content: center;
     background: rgb(179, 212, 255);
     z-index: -1;
-}
-
-a {
-    color: white;
-    text-decoration: none;
 }
 
 .headNav>div {
@@ -39,14 +38,10 @@ a {
     transition:1s;
 }
 
-.startseite{
-
-}
-
 .registrierungButton{
     padding: 20px;
     -webkit-text-fill-color: white;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 1327px;
 }
@@ -60,7 +55,7 @@ a {
 .loginButton{
     padding: 20px;
     -webkit-text-fill-color: white;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 1250px;
 }
@@ -71,30 +66,13 @@ a {
     transition:1s;
 }
 
-
-.neueListe{
-
-}
-
-.shops{
-
-}
-
-.kontakt{
-
-}
-
-.impressum{
-
-}
-
 .underScoreHeadbar{
-    width: 104px;
+    width: 183px;
     height: 5px;
     background: rgb(129, 182, 255);
-    position: absolute;
+    position: fixed;
     top: 53px;
-    left: 402px;
+    left: 362px;
 }
 
 .underScoreHeadbarMovedToNeueListe{
@@ -148,7 +126,7 @@ a {
     }
 }
 
-.grid-section{
+.projektInfos{
     animation-name: einfliegen;
     animation-duration: 1.5s;
     animation-fill-mode: backwards;
@@ -164,7 +142,12 @@ a {
         "h2"
         "problemszenario"
         "h3"
-        "loesung";
+        "loesung"
+        "h4"
+        "domaenenmodell"
+    ;
+    z-index: -2;
+    transition-duration: 2s;
 }
 
 .startseiteÜberschriften{
@@ -183,6 +166,10 @@ h2{
 
 h3{
     grid-area: h3;
+}
+
+h4{
+    grid-area: h4;
 }
 
 .problembeschreibung{
@@ -204,4 +191,9 @@ h3{
     color: rgb(170, 170, 170);
     width: 930px;
     line-height: 180%;
+}
+
+.domaenenmodell{
+    grid-area: domaenenmodell;
+    width: 930px;
 }
