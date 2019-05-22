@@ -13,8 +13,17 @@ span {
     color: white;
 }
 
+@media (min-width: 950px) {
+    .headNav {
+        width: 100%;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 950px) {
+
+}
+
 .headNav{
-    width: 100%;
     position: fixed;
     left: 0px;
     top: 0px;
@@ -32,24 +41,12 @@ span {
     z-index: 0;
 }
 
-.headNav>div:hover{
-    cursor: pointer;
-    background: rgb(129, 182, 255);
-    transition:1s;
-}
-
 .registrierungButton{
     padding: 20px;
     -webkit-text-fill-color: white;
     position: fixed;
     top: 0px;
-    left: 1327px;
-}
-
-.registrierungButton:hover{
-    cursor: pointer;
-    background: rgb(129, 182, 255);
-    transition:1s;
+    right: 20px;
 }
 
 .loginButton{
@@ -57,17 +54,11 @@ span {
     -webkit-text-fill-color: white;
     position: fixed;
     top: 0px;
-    left: 1250px;
-}
-
-.loginButton:hover{
-    cursor: pointer;
-    background: rgb(129, 182, 255);
-    transition:1s;
+    right: 150px;
 }
 
 .underScoreHeadbar{
-    width: 183px;
+    width: 184px;
     height: 5px;
     background: rgb(129, 182, 255);
     position: fixed;
@@ -117,7 +108,7 @@ span {
 
 @keyframes einfliegen {
     from{
-        transform: translateY(20%);
+        transform: translateY(10%);
         opacity: 0;
     }
     to{
@@ -147,7 +138,7 @@ span {
         "domaenenmodell"
     ;
     z-index: -2;
-    transition-duration: 2s;
+    margin-bottom: 30px;
 }
 
 .startseiteÜberschriften{
@@ -196,4 +187,46 @@ h4{
 .domaenenmodell{
     grid-area: domaenenmodell;
     width: 930px;
+}
+
+.dropDownDivs{
+    position: relative;
+    padding: 40px 0 0 0;
+    margin: 20px 0 0 0;
+    background: rgb(179, 212, 255);
+    color: white;
+}
+
+.shops{
+    animation-name: einfliegen;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    position: absolute;
+    top: 80px;
+    left: 250px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-template-areas:
+        "img img img"
+        "img img img"
+        "fussnote fussnote fussnote";
+    z-index: -2;
+}
+
+.shops>img{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    z-index: -2;
+    margin-bottom: 30px;
+}
+
+.fussnote{
+    grid-area: fussnote;
+    position: absolute;
+    bottom: -50px;
+    color: rgb(170, 170, 170);
+    margin-bottom: 20px;
 }
