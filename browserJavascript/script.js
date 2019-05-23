@@ -52,7 +52,11 @@ headbarOnClicks.forEach(function (item, index) {
 });
 
 scrollUpButton.addEventListener("click", function () {
+    scrollUpButton.style.borderColor = "rgb(179, 212, 255)";
+    scrollUpButton.style.background = "rgb(179, 212, 255)";
+    scrollUpButton.style.transition = "0.8s";
     window.scrollTo({top: 0, behavior:"smooth"});
+    $(".scrollUp").fadeOut();
 });
 
 scrollUpButton.addEventListener("mouseover", function () {
