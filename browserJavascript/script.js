@@ -1,9 +1,23 @@
 const underScoreHeadbar = document.querySelector('.underScoreHeadbar');
 const headbarOnClicks = document.querySelectorAll('.headNav>div, .loginButton, .registrierungButton');
 const projektInfosButton = document.querySelector('.projektInfosButton');
+const scrollUpButton = document.querySelector('.scrollUp');
 
 $("section").hide();
+$(".scrollUp").hide();
 $(".projektInfos").show();
+
+var currentScrollPosition = window.pageYOffset;
+
+$(window).scroll(function() {
+    currentScrollPosition = window.pageYOffset;
+    $(window).scrollTop();
+    if (currentScrollPosition > 300) {
+        $(".scrollUp").show();
+    } else {
+        $(".scrollUp").fadeOut();
+    }
+});
 
 headbarOnClicks.forEach(function (item, index) {
     item.addEventListener("click", function () {
@@ -35,5 +49,22 @@ headbarOnClicks.forEach(function (item, index) {
         item.style.background = "rgb(179, 212, 255)";
         item.style.transition = "0.8s";
     });
+});
+
+scrollUpButton.addEventListener("click", function () {
+    window.scrollTo({top: 0, behavior:"smooth"});
+});
+
+scrollUpButton.addEventListener("mouseover", function () {
+    scrollUpButton.style.borderColor = "rgb(129, 182, 255)";
+    scrollUpButton.style.background = "rgb(129, 182, 255)";
+    scrollUpButton.style.cursor = "pointer";
+    scrollUpButton.style.transition = "0.8s";
+});
+
+scrollUpButton.addEventListener("mouseout", function () {
+    scrollUpButton.style.borderColor = "rgb(179, 212, 255)";
+    scrollUpButton.style.background = "rgb(179, 212, 255)";
+    scrollUpButton.style.transition = "0.8s";
 });
 

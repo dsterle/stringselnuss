@@ -23,6 +23,20 @@ span {
 
 }
 
+.scrollUp {
+    animation-name: einfliegen;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(179, 212, 255);
+    background-color: rgb(179, 212, 255);
+    padding: 20px;
+}
+
 .headNav{
     position: fixed;
     left: 0px;
@@ -114,6 +128,17 @@ span {
     to{
         transform: translateY(0%);
         opacity: 100%;
+    }
+}
+
+@keyframes ausfliegen {
+    from{
+        transform: translateY(0%);
+        opacity: 100;
+    }
+    to{
+        transform: translateY(10%);
+        opacity: 0%;
     }
 }
 
