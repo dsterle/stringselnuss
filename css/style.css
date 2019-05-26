@@ -60,7 +60,7 @@ span {
     -webkit-text-fill-color: white;
     position: fixed;
     top: 0px;
-    right: 20px;
+    right: 58px;
 }
 
 .loginButton{
@@ -68,7 +68,48 @@ span {
     -webkit-text-fill-color: white;
     position: fixed;
     top: 0px;
-    right: 150px;
+    right: 188px;
+}
+
+.language{
+    padding: 20px;
+    -webkit-text-fill-color: white;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.loginBox, .registrierungBox{
+    position: fixed;
+    right: 0px;
+    top: 58px;
+    background: rgb(179, 212, 255);
+    width: 266px;
+    transform: translateY(-100%);
+    z-index: -2;
+}
+
+.loginform, .registrierungform{
+    padding: 10px;
+}
+
+.loginform>input, .registrierungform>input{
+    position: relative;
+    left: 8px;
+    background: rgb(179, 212, 255);
+    padding: 10px;
+    outline: none;
+    border: 2px solid rgb(129, 182, 255);
+    margin: 10px;
+    color: white;
+}
+
+.loginform>input[type="submit"], .registrierungform>input[type="submit"]{
+    width: 200px;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .underScoreHeadbar{

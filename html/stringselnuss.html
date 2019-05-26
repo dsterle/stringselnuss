@@ -30,8 +30,34 @@
       <div class="loginButton">
          <span>Login</span>
       </div>
+      <div class="loginBox">
+         <form class="loginform" action="#" method="post">
+            <input type="text" name="benutzername" placeholder="Benutzername" required> <br>
+            <input type="password" name="passwort" placeholder="Passwort" required> <br>
+            <input type="submit" name="einloggen" value="Einloggen" required>
+            <input type="submit" name="passwortVergessen" value="Passwort vergessen" required>
+         </form>
+      </div>
       <div class="registrierungButton">
          <span>Registrierung</span>
+      </div>
+      <div class="registrierungBox">
+         <form class="registrierungform" action="#" method="post">
+            <input type="text" name="benutzername" placeholder="Benutzername" required> <br>
+            <input type="password" name="passwort" placeholder="Passwort" required> <br>
+            <input type="password" name="passwortWieder" placeholder="Passwort wiederholen" required> <br>
+            <input type="email" name="email" placeholder="Email-Adresse" required>
+            <input type="checkbox" name="newsletter">
+            <label>Newsletter abonnieren</label> <br>
+            <input type="checkbox" name="agb" required>
+            <label>AGB gelesen und akzeptieren</label>
+            <input type="submit" name="registrieren" value="Registrieren">
+         </form>
+      </div>
+      <div class="language">
+         <span>
+            DE
+         </span>
       </div>
       <div class="underScoreHeadbar"></div>
    </nav>
