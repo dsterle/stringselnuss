@@ -32,8 +32,14 @@
       </div>
       <div class="loginBox">
          <form class="loginform" action="#" method="post">
-            <input type="text" name="benutzername" placeholder="Benutzername" required> <br>
-            <input type="password" name="passwort" placeholder="Passwort" required> <br>
+            <div class="inputField">
+               <i class="fas fa-user"></i>
+               <input type="text" name="benutzername" placeholder="Benutzername" required> <br>
+            </div>
+            <div class="inputField">
+               <i class="fas fa-lock"></i>
+               <input type="password" name="passwort" placeholder="Passwort" required> <br>
+            </div>
             <input type="submit" name="einloggen" value="Einloggen" required>
             <input type="submit" name="passwortVergessen" value="Passwort vergessen" required>
          </form>
@@ -43,10 +49,22 @@
       </div>
       <div class="registrierungBox">
          <form class="registrierungform" action="#" method="post">
-            <input type="text" name="benutzername" placeholder="Benutzername" required> <br>
-            <input type="password" name="passwort" placeholder="Passwort" required> <br>
-            <input type="password" name="passwortWieder" placeholder="Passwort wiederholen" required> <br>
-            <input type="email" name="email" placeholder="Email-Adresse" required>
+            <div class="inputField">
+               <i class="fas fa-user"></i>
+               <input type="text" name="benutzername" placeholder="Benutzername" required> <br>
+            </div>
+            <div class="inputField">
+               <i class="fas fa-lock"></i>
+               <input type="password" name="passwort" placeholder="Passwort" required> <br>
+            </div>
+            <div class="inputField">
+               <i class="fas fa-lock"></i>
+               <input type="password" name="passwortWieder" placeholder="Passwort wiederholen" required> <br>
+            </div>
+            <div class="inputField">
+               <i class="fas fa-envelope"></i>
+               <input type="email" name="email" placeholder="Email-Adresse" required>
+            </div>
             <input type="checkbox" name="newsletter">
             <label>Newsletter abonnieren</label> <br>
             <input type="checkbox" name="agb" required>

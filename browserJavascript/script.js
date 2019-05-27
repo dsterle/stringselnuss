@@ -48,13 +48,13 @@ headbarOnClicks.forEach(function (item, index) {
     });
 
     item.addEventListener("mouseover", function (event) {
-        item.style.background = "rgb(129, 182, 255)";
+        item.style.background = "rgb(109, 132, 159)";
         item.style.cursor = "pointer";
         item.style.transition = "0.8s";
     });
 
     item.addEventListener("mouseout", function () {
-        item.style.background = "rgb(179, 212, 255)";
+        item.style.background = "rgb(52,73,94)";
         item.style.transition = "0.8s";
     });
 });
@@ -68,15 +68,15 @@ scrollUpButton.addEventListener("click", function () {
 });
 
 scrollUpButton.addEventListener("mouseover", function () {
-    scrollUpButton.style.borderColor = "rgb(129, 182, 255)";
-    scrollUpButton.style.background = "rgb(129, 182, 255)";
+    scrollUpButton.style.borderColor = "rgb(109, 132, 159)";
+    scrollUpButton.style.background = "rgb(109, 132, 159)";
     scrollUpButton.style.cursor = "pointer";
     scrollUpButton.style.transition = "0.8s";
 });
 
 scrollUpButton.addEventListener("mouseout", function () {
-    scrollUpButton.style.borderColor = "rgb(179, 212, 255)";
-    scrollUpButton.style.background = "rgb(179, 212, 255)";
+    scrollUpButton.style.borderColor = "rgb(52,73,94)";
+    scrollUpButton.style.background = "rgb(52,73,94)";
     scrollUpButton.style.transition = "0.8s";
 });
 
@@ -99,8 +99,8 @@ loginButton.addEventListener("click", function () {
 
 document.querySelectorAll(".loginform>input[type=submit]").forEach(function (item, index) {
     item.addEventListener("mouseover", function () {
-        item.style.borderColor = "rgb(129, 182, 255)";
-        item.style.background = "rgb(129, 182, 255)";
+        item.style.borderColor = "rgb(109, 132, 159)";
+        item.style.background = "rgb(109, 132, 159)";
         item.style.cursor = "pointer";
         item.style.transition = "0.8s";
     });
@@ -108,7 +108,7 @@ document.querySelectorAll(".loginform>input[type=submit]").forEach(function (ite
 
 document.querySelectorAll(".loginform>input[type=submit]").forEach(function (item, index) {
     item.addEventListener("mouseout", function () {
-        item.style.background = "rgb(179, 212, 255)";
+        item.style.background = "rgb(52,73,94)";
         item.style.transition = "0.8s";
     });
 });
@@ -132,8 +132,8 @@ registrierungButton.addEventListener("click", function () {
 
 document.querySelectorAll(".registrierungform>input[type=submit]").forEach(function (item, index) {
     item.addEventListener("mouseover", function () {
-        item.style.borderColor = "rgb(129, 182, 255)";
-        item.style.background = "rgb(129, 182, 255)";
+        item.style.borderColor = "rgb(109, 132, 159)";
+        item.style.background = "rgb(109, 132, 159)";
         item.style.cursor = "pointer";
         item.style.transition = "0.8s";
     });
@@ -141,21 +141,21 @@ document.querySelectorAll(".registrierungform>input[type=submit]").forEach(funct
 
 document.querySelectorAll(".registrierungform>input[type=submit]").forEach(function (item, index) {
     item.addEventListener("mouseout", function () {
-        item.style.background = "rgb(179, 212, 255)";
+        item.style.background = "rgb(52,73,94)";
         item.style.transition = "0.8s";
     });
 });
 
 languageButton.addEventListener("mouseover", function () {
-    languageButton.style.borderColor = "rgb(129, 182, 255)";
-    languageButton.style.background = "rgb(129, 182, 255)";
+    languageButton.style.borderColor = "rgb(109, 132, 159)";
+    languageButton.style.background = "rgb(109, 132, 159)";
     languageButton.style.cursor = "pointer";
     languageButton.style.transition = "0.8s";
 });
 
 languageButton.addEventListener("mouseout", function () {
-    languageButton.style.borderColor = "rgb(179, 212, 255)";
-    languageButton.style.background = "rgb(179, 212, 255)";
+    languageButton.style.borderColor = "rgb(52,73,94)";
+    languageButton.style.background = "rgb(52,73,94)";
     languageButton.style.transition = "0.8s";
 });
 

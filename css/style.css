@@ -1,3 +1,5 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
 * {
     font-family: 'Roboto Slab', serif;
 
@@ -6,7 +8,7 @@
 }
 
 body{
-    background-color: rgba(145, 206, 255, 0.4);
+    background-color: white;
 }
 
 span {
@@ -32,8 +34,8 @@ span {
     bottom: 50px;
     border-style: solid;
     border-radius: 5px;
-    border-color: rgb(179, 212, 255);
-    background-color: rgb(179, 212, 255);
+    border-color: #34495e;
+    background-color: #34495e;
     padding: 20px;
 }
 
@@ -43,7 +45,7 @@ span {
     top: 0px;
     display: flex;
     justify-content: center;
-    background: rgb(179, 212, 255);
+    background: #34495e;
     z-index: -1;
 }
 
@@ -51,7 +53,7 @@ span {
     position: relative;
     padding: 20px;
     list-style: none;
-    background: rgb(179, 212, 255);
+    background: #34495e;
     z-index: 0;
 }
 
@@ -80,10 +82,10 @@ span {
 }
 
 .loginBox, .registrierungBox{
+    background: #34495e;
     position: fixed;
     right: 0px;
     top: 58px;
-    background: rgb(179, 212, 255);
     width: 266px;
     transform: translateY(-100%);
     z-index: -2;
@@ -93,19 +95,35 @@ span {
     padding: 10px;
 }
 
-.loginform>input, .registrierungform>input{
+.loginform>input, .registrierungform>input, .inputField{
     position: relative;
-    left: 8px;
-    background: rgb(179, 212, 255);
+    left: 0;
     padding: 10px;
-    outline: none;
-    border: 2px solid rgb(129, 182, 255);
+    border-bottom: 2px solid rgb(109, 132, 159);
     margin: 10px;
     color: white;
 }
 
+.inputField>input {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 6px;
+    color: white;
+}
+
 .loginform>input[type="submit"], .registrierungform>input[type="submit"]{
-    width: 200px;
+    width: 227px;
+    border: 2px solid rgb(109, 132, 159);
+    background: #34495e;
+}
+
+.loginBox i{
+    color: white;
+}
+
+label{
+    color: white;
 }
 
 ::placeholder{
@@ -115,7 +133,7 @@ span {
 .underScoreHeadbar{
     width: 184px;
     height: 5px;
-    background: rgb(129, 182, 255);
+    background: rgb(109, 132, 159);
     position: fixed;
     top: 53px;
     left: 362px;
@@ -124,7 +142,7 @@ span {
 .underScoreHeadbarMovedToNeueListe{
     width: 227px;
     height: 5px;
-    background: rgb(129, 182, 255);
+    background: rgb(109, 132, 159);
     position: absolute;
     top: 53px;
     left: 515px;
@@ -134,7 +152,7 @@ span {
 .underScoreHeadbarMovedToShops{
     width: 227px;
     height: 5px;
-    background: rgb(129, 182, 255);
+    background: rgb(109, 132, 159);
     position: absolute;
     top: 53px;
     left: 515px;
@@ -144,7 +162,7 @@ span {
 .underScoreHeadbarMovedToKontakt{
     width: 227px;
     height: 5px;
-    background: rgb(129, 182, 255);
+    background: rgb(109, 132, 159);
     position: absolute;
     top: 53px;
     left: 515px;
@@ -154,7 +172,7 @@ span {
 .underScoreHeadbarMovedToImpressum{
     width: 227px;
     height: 5px;
-    background: rgb(129, 182, 255);
+    background: rgb(109, 132, 159);
     position: absolute;
     top: 53px;
     left: 515px;
@@ -208,7 +226,7 @@ span {
 }
 
 .startseiteÜberschriften{
-    color: rgb(170, 170, 170);
+    color: #2d3d4c;
     font-size: 2rem;
     height: 23px;
 }
@@ -231,21 +249,21 @@ h4{
 
 .problembeschreibung{
     grid-area: problembeschreibung;
-    color: rgb(170, 170, 170);
+    color: #2d3d4c;
     width: 930px;
     line-height: 180%;
 }
 
 .problemszenario{
     grid-area: problemszenario;
-    color: rgb(170, 170, 170);
+    color: #2d3d4c;
     width: 930px;
     line-height: 180%;
 }
 
 .loesung{
     grid-area: loesung;
-    color: rgb(170, 170, 170);
+    color: #2d3d4c;
     width: 930px;
     line-height: 180%;
 }
@@ -259,7 +277,7 @@ h4{
     position: relative;
     padding: 40px 0 0 0;
     margin: 20px 0 0 0;
-    background: rgb(179, 212, 255);
+    background: #34495e;
     color: white;
 }
 
@@ -293,6 +311,6 @@ h4{
     grid-area: fussnote;
     position: absolute;
     bottom: -50px;
-    color: rgb(170, 170, 170);
+    color: #2d3d4c;
     margin-bottom: 20px;
 }
