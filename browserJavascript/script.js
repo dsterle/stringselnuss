@@ -1,5 +1,5 @@
 const underScoreHeadbar = document.querySelector('.underScoreHeadbar');
-const headbarOnClicks = document.querySelectorAll('.headNav>div, .loginButton, .registrierungButton');
+const headbarOnClicks = document.querySelectorAll('.headNav>div');
 const projektInfosButton = document.querySelector('.projektInfosButton');
 const scrollUpButton = document.querySelector('.scrollUp');
 const loginButton = document.querySelector(".loginButton");
@@ -57,6 +57,28 @@ headbarOnClicks.forEach(function (item, index) {
         item.style.background = "rgb(52,73,94)";
         item.style.transition = "0.8s";
     });
+});
+
+loginButton.addEventListener("mouseover", function (event) {
+    loginButton.style.background = "rgb(109, 132, 159)";
+    loginButton.style.cursor = "pointer";
+    loginButton.style.transition = "0.8s";
+});
+
+loginButton.addEventListener("mouseout", function () {
+    loginButton.style.background = "rgb(52,73,94)";
+    loginButton.style.transition = "0.8s";
+});
+
+registrierungButton.addEventListener("mouseover", function (event) {
+    registrierungButton.style.background = "rgb(109, 132, 159)";
+    registrierungButton.style.cursor = "pointer";
+    registrierungButton.style.transition = "0.8s";
+});
+
+registrierungButton.addEventListener("mouseout", function () {
+    registrierungButton.style.background = "rgb(52,73,94)";
+    registrierungButton.style.transition = "0.8s";
 });
 
 scrollUpButton.addEventListener("click", function () {
