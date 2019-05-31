@@ -44,14 +44,14 @@ span {
     left: 0;
     top: 0;
     display: flex;
-    justify-content: center;
     background: #34495e;
     z-index: -1;
-    box-shadow: 0 3px 25px 2px #2d3d4c;
+    box-shadow: 0 3px 25px 1px #2d3d4c;
 }
 
 .headNav>div {
     position: relative;
+    left: 140px;
     padding: 20px;
     list-style: none;
     background: #34495e;
@@ -62,7 +62,7 @@ span {
     padding: 20px;
     -webkit-text-fill-color: white;
     position: fixed;
-    top: 0px;
+    top: 0;
     right: 58px;
 }
 
@@ -70,7 +70,7 @@ span {
     padding: 20px;
     -webkit-text-fill-color: white;
     position: fixed;
-    top: 0px;
+    top: 0;
     right: 188px;
 }
 
@@ -137,7 +137,7 @@ label{
     background: rgb(109, 132, 159);
     position: fixed;
     top: 53px;
-    left: 362px;
+    left: 300px;
 }
 
 .underScoreHeadbarMovedToNeueListe{

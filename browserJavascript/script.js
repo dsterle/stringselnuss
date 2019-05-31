@@ -8,14 +8,13 @@ const registrierungButton = document.querySelector(".registrierungButton");
 const registrierungBox = document.querySelector(".registrierungBox");
 const languageButton = document.querySelector(".language");
 
+var currentScrollPosition = window.pageYOffset;
+var loginClicked = false;
+var registrierungClicked = false;
 
 $("section").hide();
 $(".scrollUp").hide();
 $(".projektInfos").show();
-
-var currentScrollPosition = window.pageYOffset;
-var loginClicked = false;
-var registrierungClicked = false;
 
 $(window).scroll(function() {
     currentScrollPosition = window.pageYOffset;
