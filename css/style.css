@@ -1,9 +1,7 @@
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
-
+ 
 * {
-    font-family: 'Roboto Slab', serif;
-
-    /* Basis Schriftgröße festlegen andere Schriftgrößen werden über rem Einheit definiert */
+    font-family: 'Roboto Slab';
     font-size: 14px;
 }
 
@@ -13,6 +11,10 @@ body{
 
 span {
     color: white;
+}
+
+p{
+    line-height: 180%;
 }
 
 @media (min-width: 950px) {
@@ -46,7 +48,7 @@ span {
     display: flex;
     background: #34495e;
     z-index: -1;
-    box-shadow: 0 3px 25px 1px #2d3d4c;
+    box-shadow: 0 3px 25px 1px #34495e;
 }
 
 .headNav>div {
@@ -227,46 +229,47 @@ label{
 }
 
 .startseiteÜberschriften{
-    color: #2d3d4c;
+    color: #34495e;
     font-size: 2rem;
     height: 23px;
 }
 
 h1{
     grid-area: h1;
+    font-weight: 600;
 }
 
 h2{
     grid-area: h2;
+    font-weight: 600;
 }
 
 h3{
     grid-area: h3;
+    font-weight: 600;
 }
 
 h4{
     grid-area: h4;
+    font-weight: 600;
 }
 
 .problembeschreibung{
     grid-area: problembeschreibung;
-    color: #2d3d4c;
+    color: #34495e;
     width: 930px;
-    line-height: 180%;
 }
 
 .problemszenario{
     grid-area: problemszenario;
-    color: #2d3d4c;
+    color: #34495e;
     width: 930px;
-    line-height: 180%;
 }
 
 .loesung{
     grid-area: loesung;
-    color: #2d3d4c;
+    color: #34495e;
     width: 930px;
-    line-height: 180%;
 }
 
 .domaenenmodell{
@@ -312,6 +315,46 @@ h4{
     grid-area: fussnote;
     position: absolute;
     bottom: -50px;
-    color: #2d3d4c;
+    color: #34495e;
     margin-bottom: 20px;
+}
+
+.kontakt{
+    animation-name: einfliegen;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    position: absolute;
+    left: 300px;
+    top: 80px;
+    z-index: -2;
+}
+
+.kontaktformular>input{
+    margin: 20px;
+    border: 2px solid rgb(109, 132, 159);
+    position: relative;
+    right: 20px;
+}
+
+.kontaktformular>label{
+    color: #34495e;
+}
+
+.kontaktformular>input[type="submit"]{
+    width: 227px;
+    border: 2px solid rgb(109, 132, 159);
+    background: #34495e;
+    color: white;
+    padding: 10px;
+}
+
+.impressum{
+    animation-name: einfliegen;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    position: absolute;
+    left: 300px;
+    top: 80px;
+    z-index: -2;
+    width: 900px;
 }

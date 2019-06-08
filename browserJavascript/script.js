@@ -28,17 +28,23 @@ $(window).scroll(function() {
 
 headbarOnClicks.forEach(function (item, index) {
     item.addEventListener("click", function () {
-        /*underScoreHeadbar.style.width = (parseInt(getComputedStyle(item).width) + 41).toString() + 'px';
-        underScoreHeadbar.style.left = (item.getBoundingClientRect().left).toString() + 'px';
-        underScoreHeadbar.style.transition = '1s'*/
         window.scrollTo({top: 0, behavior:"smooth"});
-        if (item.className === "projektInfosButton") {
-            $("section").hide();
-            $(".projektInfos").show();
-        }
-        if (item.className === "shopsButton") {
-            $("section").hide();
-            $(".shops").show();
+        switch(item.className) {
+            case "projektInfosButton":
+                $("section").hide();
+                $(".projektInfos").show();
+                break;
+            case "shopsButton":
+                $("section").hide();
+                $(".shops").show();
+                break;
+            case "kontaktButton":
+                $("section").hide();
+                $(".kontakt").show();
+                break;
+            case "impressumButton":
+                $("section").hide();
+                $(".impressum").show();
         }
 
         $(".underScoreHeadbar").css({"width":(parseInt(getComputedStyle(item).width) + parseInt(getComputedStyle(item).padding)*2).toString(),
@@ -118,7 +124,7 @@ loginButton.addEventListener("click", function () {
     }
 });
 
-document.querySelectorAll(".loginform>input[type=submit]").forEach(function (item, index) {
+document.querySelectorAll("input[type=submit]").forEach(function (item, index) {
     item.addEventListener("mouseover", function () {
         item.style.borderColor = "rgb(109, 132, 159)";
         item.style.background = "rgb(109, 132, 159)";
@@ -127,7 +133,7 @@ document.querySelectorAll(".loginform>input[type=submit]").forEach(function (ite
     });
 });
 
-document.querySelectorAll(".loginform>input[type=submit]").forEach(function (item, index) {
+document.querySelectorAll("input[type=submit]").forEach(function (item, index) {
     item.addEventListener("mouseout", function () {
         item.style.background = "rgb(52,73,94)";
         item.style.transition = "0.8s";
