@@ -358,3 +358,59 @@ h4{
     z-index: -2;
     width: 900px;
 }
+
+.neueListe{
+    animation-name: einfliegen;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    position: absolute;
+    left: 300px;
+    top: 80px;
+    z-index: -2;
+    width: 900px;
+}
+
+.eintrag{
+    position: absolute;
+    padding: 10px;
+    width: 300px;
+}
+
+.einkaufslisteUebernehmen{
+    position: absolute;
+    width: 304px;
+    background: #34495e;
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.einkaufslisteLoeschen{
+    position: absolute;
+    width: 304px;
+    background: #34495e;
+    margin-top: 95px;
+    padding: 10px;
+    text-align: center;
+}
+
+.einkaufslisteSpeichern{
+    position: absolute;
+    width: 304px;
+    background: #34495e;
+    margin-top: 140px;
+    padding: 10px;
+    text-align: center;
+}
+
+.einkaufsliste{
+    color: white;
+    position: absolute;
+    background: #34495e;
+    width: 300px;
+    margin-left: 330px;
+}
+
+.einkaufslisteInhalt{
+    list-style: none;
+}

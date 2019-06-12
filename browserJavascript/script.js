@@ -7,14 +7,27 @@ const loginBox = document.querySelector(".loginBox");
 const registrierungButton = document.querySelector(".registrierungButton");
 const registrierungBox = document.querySelector(".registrierungBox");
 const languageButton = document.querySelector(".language");
+const logoButton = document.querySelector(".logo");
+const einkaufslisteUebernehmenButton = document.querySelector(".einkaufslisteUebernehmen");
+const einkaufslisteSpeichernButton = document.querySelector(".einkaufslisteSpeichern");
+const einkaufslisteLoeschenButton = document.querySelector(".einkaufslisteLoeschen");
 
 var currentScrollPosition = window.pageYOffset;
 var loginClicked = false;
 var registrierungClicked = false;
+var logged = false;
 
 $("section").hide();
 $(".scrollUp").hide();
 $(".projektInfos").show();
+
+logoButton.addEventListener("click", function() {
+    window.open ("stringselnuss.html", "_self");
+});
+
+logoButton.addEventListener("mouseover", function() {
+    logoButton.style.cursor = "pointer";
+})
 
 $(window).scroll(function() {
     currentScrollPosition = window.pageYOffset;
@@ -33,6 +46,10 @@ headbarOnClicks.forEach(function (item, index) {
             case "projektInfosButton":
                 $("section").hide();
                 $(".projektInfos").show();
+                break;
+            case "neueListeButton":
+                $("section").hide();
+                $(".neueListe").show();
                 break;
             case "shopsButton":
                 $("section").hide();
@@ -186,5 +203,90 @@ languageButton.addEventListener("mouseout", function () {
     languageButton.style.transition = "0.8s";
 });
 
+einkaufslisteUebernehmenButton.addEventListener("mouseover", function () {
+    einkaufslisteUebernehmenButton.style.background = "rgb(109, 132, 159)";
+    einkaufslisteUebernehmenButton.style.cursor = "pointer";
+    einkaufslisteUebernehmenButton.style.transition = "0.8s";
+});
 
+einkaufslisteUebernehmenButton.addEventListener("mouseout", function () {
+    einkaufslisteUebernehmenButton.style.background = "rgb(52,73,94)";
+    einkaufslisteUebernehmenButton.style.transition = "0.8s";
+});
 
+einkaufslisteSpeichernButton.addEventListener("mouseover", function () {
+    einkaufslisteSpeichernButton.style.background = "rgb(109, 132, 159)";
+    einkaufslisteSpeichernButton.style.cursor = "pointer";
+    einkaufslisteSpeichernButton.style.transition = "0.8s";
+});
+
+einkaufslisteSpeichernButton.addEventListener("mouseout", function () {
+    einkaufslisteSpeichernButton.style.background = "rgb(52,73,94)";
+    einkaufslisteSpeichernButton.style.transition = "0.8s";
+});
+
+einkaufslisteLoeschenButton.addEventListener("mouseover", function () {
+    einkaufslisteLoeschenButton.style.background = "rgb(109, 132, 159)";
+    einkaufslisteLoeschenButton.style.cursor = "pointer";
+    einkaufslisteLoeschenButton.style.transition = "0.8s";
+});
+
+einkaufslisteLoeschenButton.addEventListener("mouseout", function () {
+    einkaufslisteLoeschenButton.style.background = "rgb(52,73,94)";
+    einkaufslisteLoeschenButton.style.transition = "0.8s";
+});
+
+einkaufslisteUebernehmenButton.addEventListener("click", function() {
+    if (document.querySelector(".eintrag").value === "") {
+        alert("Bitte tragen Sie etwas in das Textfeld ein!");
+    } else {
+        var neuerEintrag = document.createElement("li");
+        var neuerEintragInhalt = document.createTextNode(document.querySelector(".eintrag").value);
+        neuerEintrag.style.listStyle = "none";
+        neuerEintrag.appendChild(neuerEintragInhalt);
+        document.querySelector(".einkaufslisteInhalt").appendChild(neuerEintrag);
+        document.querySelector(".eintrag").value = null;
+    }
+});
+
+document.querySelector(".eintrag").addEventListener("keypress", function(e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { 
+        if (document.querySelector(".eintrag").value === "") {
+            alert("Bitte tragen Sie etwas in das Textfeld ein!");
+        } else {
+            var neuerEintrag = document.createElement("li");
+            var neuerEintragInhalt = document.createTextNode(document.querySelector(".eintrag").value);
+            neuerEintrag.style.listStyle = "none";
+            neuerEintrag.appendChild(neuerEintragInhalt);
+            document.querySelector(".einkaufslisteInhalt").appendChild(neuerEintrag);
+            document.querySelector(".eintrag").value = null;
+        }
+    }
+});
+
+einkaufslisteLoeschenButton.addEventListener("click", function() {
+    var einkaufslisteUeberschrift = document.querySelectorAll(".einkaufslisteInhalt > li")[0];
+    $(".einkaufslisteInhalt").empty();
+    document.querySelector(".einkaufslisteInhalt").appendChild(einkaufslisteUeberschrift);
+});
+
+einkaufslisteSpeichernButton.addEventListener("click", function() {
+    if(!logged){
+        alert("Sie müssen eingeloggt sein, um die Liste zu speichern");
+        if (loginClicked === false) {
+            if (registrierungClicked === true) {
+                registrierungBox.style.transform = "translateY(-100%)";
+                registrierungBox.style.transition = "0.8s";
+                registrierungClicked = false;
+            }
+            loginBox.style.transform = "translateY(0%)";
+            loginBox.style.transition = "0.8s";
+            loginClicked = true;
+        } else if (loginClicked === true){
+            loginBox.style.transform = "translateY(-100%)";
+            loginBox.style.transition = "0.8s";
+            loginClicked = false;
+        }
+    }
+});
