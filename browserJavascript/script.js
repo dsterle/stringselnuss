@@ -148,13 +148,15 @@ document.querySelectorAll("input[type=submit]").forEach(function (item, index) {
         item.style.cursor = "pointer";
         item.style.transition = "0.8s";
     });
-});
 
-document.querySelectorAll("input[type=submit]").forEach(function (item, index) {
     item.addEventListener("mouseout", function () {
         item.style.background = "rgb(52,73,94)";
         item.style.transition = "0.8s";
     });
+
+    item.addEventListener("click", function() {
+        alert("Leider ist diese Funktion momentan nicht verfügbar.");
+    })
 });
 
 registrierungButton.addEventListener("click", function () {
@@ -203,6 +205,10 @@ languageButton.addEventListener("mouseout", function () {
     languageButton.style.transition = "0.8s";
 });
 
+languageButton.addEventListener("click", function() {
+    alert("Leider ist diese Funktion momentan nicht verfügbar.");
+})
+
 einkaufslisteUebernehmenButton.addEventListener("mouseover", function () {
     einkaufslisteUebernehmenButton.style.background = "rgb(109, 132, 159)";
     einkaufslisteUebernehmenButton.style.cursor = "pointer";
@@ -243,6 +249,7 @@ einkaufslisteUebernehmenButton.addEventListener("click", function() {
         var neuerEintrag = document.createElement("li");
         var neuerEintragInhalt = document.createTextNode(document.querySelector(".eintrag").value);
         neuerEintrag.style.listStyle = "none";
+        neuerEintrag.style.padding = "10px";
         neuerEintrag.appendChild(neuerEintragInhalt);
         document.querySelector(".einkaufslisteInhalt").appendChild(neuerEintrag);
         document.querySelector(".eintrag").value = null;
@@ -258,6 +265,7 @@ document.querySelector(".eintrag").addEventListener("keypress", function(e) {
             var neuerEintrag = document.createElement("li");
             var neuerEintragInhalt = document.createTextNode(document.querySelector(".eintrag").value);
             neuerEintrag.style.listStyle = "none";
+            neuerEintrag.style.padding = "10px";
             neuerEintrag.appendChild(neuerEintragInhalt);
             document.querySelector(".einkaufslisteInhalt").appendChild(neuerEintrag);
             document.querySelector(".eintrag").value = null;
@@ -290,3 +298,4 @@ einkaufslisteSpeichernButton.addEventListener("click", function() {
         }
     }
 });
+

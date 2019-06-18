@@ -379,13 +379,15 @@ h4{
     position: absolute;
     padding: 10px;
     width: 300px;
+    border: 2px solid #34495e;
+    height: 23px;
 }
 
 .einkaufslisteUebernehmen{
     position: absolute;
     width: 304px;
     background: #34495e;
-    margin-top: 50px;
+    margin-top: 53px;
     padding: 10px;
     text-align: center;
 }
@@ -394,7 +396,7 @@ h4{
     position: absolute;
     width: 304px;
     background: #34495e;
-    margin-top: 95px;
+    margin-top: 98px;
     padding: 10px;
     text-align: center;
 }
@@ -403,7 +405,7 @@ h4{
     position: absolute;
     width: 304px;
     background: #34495e;
-    margin-top: 140px;
+    margin-top: 143px;
     padding: 10px;
     text-align: center;
 }
