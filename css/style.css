@@ -17,16 +17,6 @@ p{
     line-height: 180%;
 }
 
-@media (min-width: 950px) {
-    .headNav {
-        width: 100%;
-    }
-}
-
-@media (min-width: 450px) and (max-width: 950px) {
-
-}
-
 .scrollUp {
     animation-name: einfliegen;
     animation-duration: 1.5s;
@@ -55,6 +45,7 @@ p{
     background: #34495e;
     z-index: -1;
     box-shadow: 0 3px 25px 1px #34495e;
+    width: 100%;
 }
 
 .logo{
@@ -103,7 +94,7 @@ p{
     top: 58px;
     width: 266px;
     transform: translateY(-130%);
-    z-index: -2;
+    z-index: -1;
 }
 
 .loginform, .registrierungform{
@@ -133,7 +124,7 @@ p{
     background: #34495e;
 }
 
-.loginBox i{
+i{
     color: white;
 }
 
@@ -441,9 +432,12 @@ h4{
 
 .miniMenue{
     position: fixed;
-    left: -200px;
+    left: -250px;
     top: 58px;
     background: #34495e;
-    height: 300px;
-    width: 200px;
+}
+
+.miniMenue>div{
+    padding: 20px;
+    z-index: 0;
 }

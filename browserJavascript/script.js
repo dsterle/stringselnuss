@@ -11,6 +11,7 @@ const logoButton = document.querySelector(".logo");
 const einkaufslisteUebernehmenButton = document.querySelector(".einkaufslisteUebernehmen");
 const einkaufslisteSpeichernButton = document.querySelector(".einkaufslisteSpeichern");
 const einkaufslisteLoeschenButton = document.querySelector(".einkaufslisteLoeschen");
+const burgermenue = document.createElement("IMG");
 
 var currentScrollPosition = window.pageYOffset;
 var loginClicked = false;
@@ -307,49 +308,86 @@ console.log(headbarOnClicks);
 x.addListener(function(){
     if (x.matches) {
         headbarOnClicks.forEach(function(element) {
-            element.style.visibility = "hidden";
+            element.remove();
         });
         underScoreHeadbar.style.visibility = "hidden";
-        loginButton.style.visibility = "hidden";
-        registrierungButton.style.visibility = "hidden";
-        languageButton.style.visibility = "hidden";
         logoButton.style.left = "45px";
-        let c = document.createElement("IMG");
-        c.setAttribute("src", "../img/burgermenue.svg");
-        c.classList.add("burgermenue");
-        c.addEventListener("mouseover", function () {
-            c.style.background = "rgb(109, 132, 159)";
-            c.style.cursor = "pointer";
-            c.style.transition = "0.8s";
+        burgermenue.setAttribute("src", "../img/burgermenue.svg");
+        burgermenue.className = "burgermenue";
+        burgermenue.addEventListener("mouseover", function () {
+            burgermenue.style.background = "rgb(109, 132, 159)";
+            burgermenue.style.cursor = "pointer";
+            burgermenue.style.transition = "0.8s";
         });
         
-        c.addEventListener("mouseout", function () {
-            c.style.background = "rgb(52,73,94)";
-            c.style.transition = "0.8s";
+        burgermenue.addEventListener("mouseout", function () {
+            burgermenue.style.background = "rgb(52,73,94)";
+            burgermenue.style.transition = "0.8s";
         });
-        c.addEventListener("click", function() {
+        burgermenue.addEventListener("click", function() {
             if(!miniMenueClicked){
-                c.style.transform = "rotate(180deg)";
-                document.querySelector(".miniMenue").style.transform = "translateX(100%)";
+                burgermenue.style.transform = "rotate(180deg)";
+                document.querySelector(".miniMenue").style.transform = "translateX(103%)";
                 document.querySelector(".miniMenue").style.transition = "0.8s";
                 miniMenueClicked = true;
             } else {
-                c.style.transform = "rotate(-180deg)";
-                document.querySelector(".miniMenue").style.transform = "translateX(-100%)";
+                burgermenue.style.transform = "rotate(-180deg)";
+                document.querySelector(".miniMenue").style.transform = "translateX(-103%)";
                 document.querySelector(".miniMenue").style.transition = "0.8s";
                 miniMenueClicked = false;
             }
         });
-        document.body.appendChild(c);
+        document.body.appendChild(burgermenue);
     } else {
+        if (miniMenueClicked) {
+            burgermenue.style.transform = "rotate(-180deg)";
+            document.querySelector(".miniMenue").style.transform = "translateX(-103%)";
+            document.querySelector(".miniMenue").style.transition = "0.8s";
+            miniMenueClicked = false;
+        }
         headbarOnClicks.forEach(function(element) {
-            element.style.visibility = "visible";
+            document.querySelector(".headNav").appendChild(element);
         });
         underScoreHeadbar.style.visibility = "visible";
-        loginButton.style.visibility = "visible";
-        registrierungButton.style.visibility = "visible";
-        languageButton.style.visibility = "visible";
         logoButton.style.left = "0px";
         document.querySelector(".burgermenue").remove();
     }
 })
+
+document.querySelectorAll(".miniMenue>div").forEach(function (item, index) {
+    item.addEventListener("click", function () {
+        window.scrollTo({top: 0, behavior:"smooth"});
+        switch(item.className) {
+            case "projektInfosButton":
+                $("section").hide();
+                $(".projektInfos").show();
+                break;
+            case "neueListeButton":
+                $("section").hide();
+                $(".neueListe").show();
+                break;
+            case "shopsButton":
+                $("section").hide();
+                $(".shops").show();
+                break;
+            case "kontaktButton":
+                $("section").hide();
+                $(".kontakt").show();
+                break;
+            case "impressumButton":
+                $("section").hide();
+                $(".impressum").show();
+        }
+    });
+
+    item.addEventListener("mouseover", function (event) {
+        item.style.background = "rgb(109, 132, 159)";
+        item.style.cursor = "pointer";
+        item.style.transition = "0.8s";
+    });
+
+    item.addEventListener("mouseout", function () {
+        item.style.background = "rgb(52,73,94)";
+        item.style.transition = "0.8s";
+    });
+});
