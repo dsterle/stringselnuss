@@ -50,10 +50,17 @@ p{
     position: fixed;
     left: 0;
     top: 0;
+    height: 58px;
     display: flex;
     background: #34495e;
     z-index: -1;
     box-shadow: 0 3px 25px 1px #34495e;
+}
+
+.logo{
+    position: relative;
+    left: 0;
+    height: 58px;
 }
 
 .headNav>div {
@@ -95,7 +102,7 @@ p{
     right: 0px;
     top: 58px;
     width: 266px;
-    transform: translateY(-100%);
+    transform: translateY(-130%);
     z-index: -2;
 }
 
@@ -420,4 +427,23 @@ h4{
 
 .einkaufslisteInhalt{
     list-style: none;
+}
+
+.burgermenue{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    padding: 10px;
+    width: 30px;
+    height: 38px;
+}
+
+.miniMenue{
+    position: fixed;
+    left: -200px;
+    top: 58px;
+    background: #34495e;
+    height: 300px;
+    width: 200px;
 }

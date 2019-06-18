@@ -16,6 +16,7 @@ var currentScrollPosition = window.pageYOffset;
 var loginClicked = false;
 var registrierungClicked = false;
 var logged = false;
+var miniMenueClicked = false;
 
 $("section").hide();
 $(".scrollUp").hide();
@@ -299,3 +300,56 @@ einkaufslisteSpeichernButton.addEventListener("click", function() {
     }
 });
 
+let x = window.matchMedia("(max-width: 1400px)");
+
+console.log(headbarOnClicks);
+
+x.addListener(function(){
+    if (x.matches) {
+        headbarOnClicks.forEach(function(element) {
+            element.style.visibility = "hidden";
+        });
+        underScoreHeadbar.style.visibility = "hidden";
+        loginButton.style.visibility = "hidden";
+        registrierungButton.style.visibility = "hidden";
+        languageButton.style.visibility = "hidden";
+        logoButton.style.left = "45px";
+        let c = document.createElement("IMG");
+        c.setAttribute("src", "../img/burgermenue.svg");
+        c.classList.add("burgermenue");
+        c.addEventListener("mouseover", function () {
+            c.style.background = "rgb(109, 132, 159)";
+            c.style.cursor = "pointer";
+            c.style.transition = "0.8s";
+        });
+        
+        c.addEventListener("mouseout", function () {
+            c.style.background = "rgb(52,73,94)";
+            c.style.transition = "0.8s";
+        });
+        c.addEventListener("click", function() {
+            if(!miniMenueClicked){
+                c.style.transform = "rotate(180deg)";
+                document.querySelector(".miniMenue").style.transform = "translateX(100%)";
+                document.querySelector(".miniMenue").style.transition = "0.8s";
+                miniMenueClicked = true;
+            } else {
+                c.style.transform = "rotate(-180deg)";
+                document.querySelector(".miniMenue").style.transform = "translateX(-100%)";
+                document.querySelector(".miniMenue").style.transition = "0.8s";
+                miniMenueClicked = false;
+            }
+        });
+        document.body.appendChild(c);
+    } else {
+        headbarOnClicks.forEach(function(element) {
+            element.style.visibility = "visible";
+        });
+        underScoreHeadbar.style.visibility = "visible";
+        loginButton.style.visibility = "visible";
+        registrierungButton.style.visibility = "visible";
+        languageButton.style.visibility = "visible";
+        logoButton.style.left = "0px";
+        document.querySelector(".burgermenue").remove();
+    }
+})
