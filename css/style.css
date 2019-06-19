@@ -83,8 +83,8 @@ p{
     padding: 20px;
     -webkit-text-fill-color: white;
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
 }
 
 .loginBox, .registrierungBox{
@@ -93,7 +93,7 @@ p{
     right: 0px;
     top: 58px;
     width: 266px;
-    transform: translateY(-130%);
+    transform: translateY(-150%);
     z-index: -1;
 }
 

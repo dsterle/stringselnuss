@@ -1,6 +1,10 @@
 const underScoreHeadbar = document.querySelector('.underScoreHeadbar');
 const headbarOnClicks = document.querySelectorAll('.headNav>div');
 const projektInfosButton = document.querySelector('.projektInfosButton');
+const neueListeButton = document.querySelector('.neueListeButton');
+const shopsButton = document.querySelector('.shopsButton');
+const kontaktButton = document.querySelector('.kontaktButton');
+const impressumButton = document.querySelector('.impressumButton');
 const scrollUpButton = document.querySelector('.scrollUp');
 const loginButton = document.querySelector(".loginButton");
 const loginBox = document.querySelector(".loginBox");
@@ -12,12 +16,15 @@ const einkaufslisteUebernehmenButton = document.querySelector(".einkaufslisteUeb
 const einkaufslisteSpeichernButton = document.querySelector(".einkaufslisteSpeichern");
 const einkaufslisteLoeschenButton = document.querySelector(".einkaufslisteLoeschen");
 const burgermenue = document.createElement("IMG");
+const miniMenue = document.querySelector(".miniMenue");
+
 
 var currentScrollPosition = window.pageYOffset;
 var loginClicked = false;
 var registrierungClicked = false;
 var logged = false;
 var miniMenueClicked = false;
+var currentPage;
 
 $("section").hide();
 $(".scrollUp").hide();
@@ -41,6 +48,12 @@ $(window).scroll(function() {
     }
 });
 
+function moveUnderScoreHeadbar() {
+    $(".underScoreHeadbar").css({"width":(parseInt(getComputedStyle(currentPage).width) + parseInt(getComputedStyle(currentPage).padding)*2).toString(),
+                                        "left":(currentPage.getBoundingClientRect().left).toString() + 'px',
+                                        "transition":"1s"});
+}
+
 headbarOnClicks.forEach(function (item, index) {
     item.addEventListener("click", function () {
         window.scrollTo({top: 0, behavior:"smooth"});
@@ -48,27 +61,30 @@ headbarOnClicks.forEach(function (item, index) {
             case "projektInfosButton":
                 $("section").hide();
                 $(".projektInfos").show();
+                currentPage = projektInfosButton;
                 break;
             case "neueListeButton":
                 $("section").hide();
                 $(".neueListe").show();
+                currentPage = neueListeButton;
                 break;
             case "shopsButton":
                 $("section").hide();
                 $(".shops").show();
+                currentPage = shopsButton;
                 break;
             case "kontaktButton":
                 $("section").hide();
                 $(".kontakt").show();
+                currentPage = kontaktButton;
                 break;
             case "impressumButton":
                 $("section").hide();
                 $(".impressum").show();
+                currentPage = impressumButton;
+                break;
         }
-
-        $(".underScoreHeadbar").css({"width":(parseInt(getComputedStyle(item).width) + parseInt(getComputedStyle(item).padding)*2).toString(),
-                                        "left":(item.getBoundingClientRect().left).toString() + 'px',
-                                        "transition":"1s"});
+        moveUnderScoreHeadbar();
     });
 
     item.addEventListener("mouseover", function (event) {
@@ -301,58 +317,71 @@ einkaufslisteSpeichernButton.addEventListener("click", function() {
     }
 });
 
-let x = window.matchMedia("(max-width: 1400px)");
-
-console.log(headbarOnClicks);
-
-x.addListener(function(){
-    if (x.matches) {
-        headbarOnClicks.forEach(function(element) {
-            element.remove();
-        });
-        underScoreHeadbar.style.visibility = "hidden";
-        logoButton.style.left = "45px";
-        burgermenue.setAttribute("src", "../img/burgermenue.svg");
-        burgermenue.className = "burgermenue";
-        burgermenue.addEventListener("mouseover", function () {
-            burgermenue.style.background = "rgb(109, 132, 159)";
-            burgermenue.style.cursor = "pointer";
-            burgermenue.style.transition = "0.8s";
-        });
-        
-        burgermenue.addEventListener("mouseout", function () {
-            burgermenue.style.background = "rgb(52,73,94)";
-            burgermenue.style.transition = "0.8s";
-        });
-        burgermenue.addEventListener("click", function() {
-            if(!miniMenueClicked){
-                burgermenue.style.transform = "rotate(180deg)";
-                document.querySelector(".miniMenue").style.transform = "translateX(103%)";
-                document.querySelector(".miniMenue").style.transition = "0.8s";
-                miniMenueClicked = true;
-            } else {
-                burgermenue.style.transform = "rotate(-180deg)";
-                document.querySelector(".miniMenue").style.transform = "translateX(-103%)";
-                document.querySelector(".miniMenue").style.transition = "0.8s";
-                miniMenueClicked = false;
-            }
-        });
-        document.body.appendChild(burgermenue);
-    } else {
-        if (miniMenueClicked) {
-            burgermenue.style.transform = "rotate(-180deg)";
-            document.querySelector(".miniMenue").style.transform = "translateX(-103%)";
-            document.querySelector(".miniMenue").style.transition = "0.8s";
+burgermenue.setAttribute("src", "../img/burgermenue.svg");
+    burgermenue.className = "burgermenue";
+    burgermenue.addEventListener("mouseover", function () {
+        burgermenue.style.background = "rgb(109, 132, 159)";
+        burgermenue.style.cursor = "pointer";
+        burgermenue.style.transition = "0.8s";
+    });
+    
+    burgermenue.addEventListener("mouseout", function () {
+        burgermenue.style.background = "rgb(52,73,94)";
+        burgermenue.style.transition = "0.8s";
+    });
+    burgermenue.addEventListener("click", function() {
+        console.log("hi");
+        if(!miniMenueClicked){
+            burgermenue.style.transform = "rotate(180deg)";
+            miniMenue.style.transform = "translateX(103%)";
+            miniMenue.style.transition = "0.8s";
+            miniMenueClicked = true;
+        } else {
+            burgermenue.style.transform = "rotate(0deg)";
+            miniMenue.style.transform = "translateX(-103%)";
+            miniMenue.style.transition = "0.8s";
             miniMenueClicked = false;
         }
-        headbarOnClicks.forEach(function(element) {
-            document.querySelector(".headNav").appendChild(element);
-        });
-        underScoreHeadbar.style.visibility = "visible";
-        logoButton.style.left = "0px";
-        document.querySelector(".burgermenue").remove();
+    });
+
+function minimizeWindow() {
+    headbarOnClicks.forEach(function(element) {
+        element.remove();
+    });
+    underScoreHeadbar.style.visibility = "hidden";
+    logoButton.style.left = "55px";
+    document.body.appendChild(burgermenue);
+}
+
+function maximizeWindow() {
+    if (miniMenueClicked) {
+        burgermenue.style.transform = "rotate(-180deg)";
+        miniMenue.style.transform = "translateX(-103%)";
+        miniMenue.style.transition = "0.8s";
+        miniMenueClicked = false;
     }
-})
+    headbarOnClicks.forEach(function(element) {
+        document.querySelector(".headNav").appendChild(element);
+    });
+    underScoreHeadbar.style.visibility = "visible";
+    logoButton.style.left = "0px";
+    if(document.querySelector(".burgermenue") != null)
+    document.querySelector(".burgermenue").remove();
+}
+
+const x = window.matchMedia("(max-width: 1400px)");
+x.addListener(function(){
+    if(x.matches) {
+        minimizeWindow();
+    } else {
+        maximizeWindow();
+    }
+});
+if (x.matches) {
+    minimizeWindow();
+} else {
+    maximizeWindow();
+}
 
 document.querySelectorAll(".miniMenue>div").forEach(function (item, index) {
     item.addEventListener("click", function () {
@@ -361,23 +390,30 @@ document.querySelectorAll(".miniMenue>div").forEach(function (item, index) {
             case "projektInfosButton":
                 $("section").hide();
                 $(".projektInfos").show();
+                currentPage = projektInfosButton;
                 break;
             case "neueListeButton":
                 $("section").hide();
                 $(".neueListe").show();
+                currentPage = neueListeButton;
                 break;
             case "shopsButton":
                 $("section").hide();
                 $(".shops").show();
+                currentPage = shopsButton;
                 break;
             case "kontaktButton":
                 $("section").hide();
                 $(".kontakt").show();
+                currentPage = kontaktButton;
                 break;
             case "impressumButton":
                 $("section").hide();
                 $(".impressum").show();
+                currentPage = impressumButton;
+                break;
         }
+        moveUnderScoreHeadbar();
     });
 
     item.addEventListener("mouseover", function (event) {
