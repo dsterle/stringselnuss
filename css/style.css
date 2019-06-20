@@ -43,7 +43,7 @@ p{
     height: 58px;
     display: flex;
     background: #34495e;
-    z-index: -1;
+    z-index: 0;
     box-shadow: 0 3px 25px 1px #34495e;
     width: 100%;
 }
