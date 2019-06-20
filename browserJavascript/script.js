@@ -24,7 +24,7 @@ var loginClicked = false;
 var registrierungClicked = false;
 var logged = false;
 var miniMenueClicked = false;
-var currentPage;
+var currentPage = projektInfosButton;
 
 $("section").hide();
 $(".scrollUp").hide();
@@ -367,6 +367,7 @@ function maximizeWindow() {
     logoButton.style.left = "0px";
     if(document.querySelector(".burgermenue") != null)
     document.querySelector(".burgermenue").remove();
+    moveUnderScoreHeadbar();
 }
 
 const x = window.matchMedia("(max-width: 1400px)");
@@ -413,7 +414,6 @@ document.querySelectorAll(".miniMenue>div").forEach(function (item, index) {
                 currentPage = impressumButton;
                 break;
         }
-        moveUnderScoreHeadbar();
     });
 
     item.addEventListener("mouseover", function (event) {
