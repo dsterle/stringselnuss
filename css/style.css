@@ -132,10 +132,6 @@ label{
     color: white;
 }
 
-::placeholder{
-    color: rgba(255, 255, 255, 0.5);
-}
-
 .underScoreHeadbar{
     width: 184px;
     height: 5px;
