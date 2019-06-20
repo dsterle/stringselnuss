@@ -339,6 +339,10 @@ h4{
     color: #34495e;
 }
 
+.kontaktformular>input{
+    padding: 10px;
+}
+
 .kontaktformular>input[type="submit"]{
     width: 227px;
     border: 2px solid rgb(109, 132, 159);
