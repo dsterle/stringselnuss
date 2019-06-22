@@ -168,22 +168,22 @@
    <form class="kontaktformular" action="#" method="GET" accept-charset="UTF-8">
       <label for="anredeHerr">Herr</label>
       <input
-      type="radio" class="anredeHerr" name="anrede" value="M" required>
+      type="radio" class="anredeHerr" name="anrede" id="anredeHerr" value="M" required>
       <label for="anredeFrau">Frau</label>										
 		<input
-      type="radio" class="anredeFrau" name="anrede" value="F" required> <br>
+      type="radio" class="anredeFrau" name="anrede" id="anredeFrau" value="F" required> <br>
       <label for="nachname">Nachname: </label> <br>
       <input
-      type="text" class="nachname" name="nachname" maxlength="50" placeholder="Mustermann" required> <br>
+      type="text" class="nachname" name="nachname" id="nachname" maxlength="50" placeholder="Mustermann" required> <br>
       <label for="vorname">Vorname: </label> <br>
       <input
-      type="text" class="vorname" name="vorname" maxlength="50" placeholder="Max" required> <br>
+      type="text" class="vorname" name="vorname" id="vorname" maxlength="50" placeholder="Max" required> <br>
       <label for="geburtsdatum">Geburtsdatum: </label> <br>
-      <input type="date" class="geburtsdatum" name="geburtsdatum" required> <br>
+      <input type="date" class="geburtsdatum" name="geburtsdatum" id="geburtsdatum" required> <br>
       <label for="email">Email-Adresse: </label> <br>
-      <input type="email" class="email" name="email" maxlength="50" placeholder="Max@Musterstadt.de" required> <br>
+      <input type="email" class="email" name="email" id="email" maxlength="50" placeholder="Max@Musterstadt.de" required> <br>
       <label for="telefonnummer">Telefonnummer: </label> <br>
-      <input type="text" class="telefonnummer" name="telefonnummer" maxlength="50" placeholder="01234/5678912345"> <br> <br>
+      <input type="text" class="telefonnummer" name="telefonnummer" id="telefonnummer" maxlength="50" placeholder="01234/5678912345"> <br> <br>
       <label for="anliegen">Anliegen: </label> <br> <br>
       <select class="anliegenAuswahl" name="anliegenAuswahl" required>
          <option value="">bitte auswählen</option>
@@ -192,12 +192,12 @@
          <option value="praktikum/arbeitsstelle/shk">Praktikum/Arbeitsstelle/SHK</option>
          <option value="sonstiges">Sonstiges</option>
       </select> <br> <br>
-      <textarea class="anliegen" name="anliegen" cols="50" rows="10" required></textarea> <br>
+      <textarea class="anliegen" name="anliegen" id="anliegen" cols="50" rows="10" required></textarea> <br>
       <label for="newsletter"> Newsletter abonnieren </label>
-		<input type="checkbox" class="newsletter" name="newsletter" value="newsletter">
+		<input type="checkbox" class="newsletter" name="newsletter" id="newsletter" value="newsletter">
 		<br>
       <label for="nutzungsbed">Ich stimme den Nutzungsbedingungen zu</label>
-      <input type="checkbox" class="nutzungsbed" name="nutzungsbed" value="nutzungsbedingungen" required> <br>
+      <input type="checkbox" class="nutzungsbed" name="nutzungsbed" id="nutzungsbed" value="nutzungsbedingungen" required> <br>
       <input type="submit" value="Absenden">
    </form>
 </section>
