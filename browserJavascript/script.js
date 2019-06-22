@@ -31,7 +31,7 @@ $(".scrollUp").hide();
 $(".projektInfos").show();
 
 logoButton.addEventListener("click", function() {
-    window.open ("index.html", "_self");
+    window.open ("../index.html", "_self");
 });
 
 logoButton.addEventListener("mouseover", function() {
