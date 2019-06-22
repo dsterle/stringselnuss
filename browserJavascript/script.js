@@ -317,7 +317,7 @@ einkaufslisteSpeichernButton.addEventListener("click", function() {
     }
 });
 
-burgermenue.setAttribute("src", "../img/burgermenue.svg");
+burgermenue.setAttribute("src", './img/burgermenue.svg');
     burgermenue.className = "burgermenue";
     burgermenue.addEventListener("mouseover", function () {
         burgermenue.style.background = "rgb(109, 132, 159)";
