@@ -31,7 +31,7 @@ $(".scrollUp").hide();
 $(".projektInfos").show();
 
 logoButton.addEventListener("click", function() {
-    window.open ("../index.html", "_self");
+    window.open ("../../stringselnuss", "_self");
 });
 
 logoButton.addEventListener("mouseover", function() {
