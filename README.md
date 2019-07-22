@@ -1,6 +1,6 @@
 # Über das Projekt
-      Dieses Projekt ist im Rahmen der Veranstaltung Grundlagen des Webs 
-      im dritten Semester an der Technischen Hochschule Köln entstanden.
+      Dieses Projekt ist im Rahmen der Veranstaltung Grundlagen des Webs im dritten Semester an der Technischen 
+      Hochschule Köln entstanden.
 
 # Problembeschreibung
       Es gibt mehrere Discounter mit denselben Produkten, jedoch unterschiedlichen Preisen. Des Weiteren hat jeder
