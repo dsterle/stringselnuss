@@ -18,7 +18,6 @@ const einkaufslisteLoeschenButton = document.querySelector(".einkaufslisteLoesch
 const burgermenue = document.createElement("IMG");
 const miniMenue = document.querySelector(".miniMenue");
 
-
 var currentScrollPosition = window.pageYOffset;
 var loginClicked = false;
 var registrierungClicked = false;

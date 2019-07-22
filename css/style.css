@@ -141,46 +141,6 @@ label{
     left: 300px;
 }
 
-.underScoreHeadbarMovedToNeueListe{
-    width: 227px;
-    height: 5px;
-    background: rgb(109, 132, 159);
-    position: absolute;
-    top: 53px;
-    left: 515px;
-    transition: 1s;
-}
-
-.underScoreHeadbarMovedToShops{
-    width: 227px;
-    height: 5px;
-    background: rgb(109, 132, 159);
-    position: absolute;
-    top: 53px;
-    left: 515px;
-    transition: 1s;
-}
-
-.underScoreHeadbarMovedToKontakt{
-    width: 227px;
-    height: 5px;
-    background: rgb(109, 132, 159);
-    position: absolute;
-    top: 53px;
-    left: 515px;
-    transition: 1s;
-}
-
-.underScoreHeadbarMovedToImpressum{
-    width: 227px;
-    height: 5px;
-    background: rgb(109, 132, 159);
-    position: absolute;
-    top: 53px;
-    left: 515px;
-    transition: 1s;
-}
-
 @keyframes einfliegen {
     from{
         transform: translateY(10%);
